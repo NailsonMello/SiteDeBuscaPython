@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Theme Made By www.w3schools.com - No Copyright -->
+    <title>Connects Buscador</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .jumbotron {
+            background-color: #C0C0C0;
+        }
+
+        .btn-custom {
+            background-color: #000000;
+            border: #000000;
+        }
+
+        .titleHome {
+            font-family: "Oswald", serif;
+            font-style: italic;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .resultadoPesquisa {
+            background-color: #ffffff;
+            margin-top: 20px;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+        }
+
+        .titleHome2 {
+            font-family: "Oswald", serif;
+            font-style: italic;
+            font-weight: bold;
+            color: #000000;
+        }
+        .config a{
+            width: 100%;
+            word-wrap: break-word;
+            margin-bottom: 15px;
+
+        }
+    </style>
+</head>
+<body class="colorBody">
+
+<div class="container">
+    <div class="col-sm-12 jumbotron text-center">
+        <h1 class="titleHome2">Connects</h1>
+        <h2 class="titleHome">O Buscador</h2>
+        <form class="form-inline" role="form" action="{{url_for('send_data')}}" method="POST">
+            <div class="input-group">
+                <input type="text" class="form-control" size="50"
+                       placeholder="Pesquisar na Connects" name="conteudoPesquisa" required>
+                <div class="input-group-btn">
+                    <button type="submit" class="btn btn-danger btn-custom">Pesquisar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="col-sm-12">
+        <p>Resultado da pesquisa...</p>
+          {%for dat in data%}
+        {%for datas in dats%}
+             <h4>{{datas}}</h4>
+             <h5 class="config"><a href="{{dat}}">{{dat}}</a></h5>
+          {%endfor%}
+        {%endfor%}
+    </div>
+</div>
+</body>
+</html>

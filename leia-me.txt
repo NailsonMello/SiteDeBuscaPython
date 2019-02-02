@@ -1,0 +1,10 @@
+Stop words - são palavras que podem ser consideradas irrelevantes para o conjunto de resultados a ser exibido em uma busca realizada em uma search engine. Exemplos: as, e, os, de, para, com, sem, foi.
+stemmer - stemização é o processo de reduzir palavras flexionadas (ou às vezes derivadas) ao seu tronco (stem), programa de computador
+que executa o processo de stemming - retira algumas letras no início e/ou
+no nal das palavras, assumindo que a cadeia de caracteres restante ainda represente
+a essência delas.
+
+
+
+veja:
+https://medium.com/@viniljf/utilizando-processamento-de-linguagem-natural-para-criar-um-sumariza%C3%A7%C3%A3o-autom%C3%A1tica-de-textos-775cb428c84e
